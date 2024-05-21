@@ -6,6 +6,10 @@ app.use(express.json())
 const arr = []
 
 //Render Data
+app.get('/', (req, res) => {
+    res.send('Hello Wolrd')
+  })
+
 app.get('/api/v1/todos', (req, res) => {
     res.send({todos: arr})
   })
